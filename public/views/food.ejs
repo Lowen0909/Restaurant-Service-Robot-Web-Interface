@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/food.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/food.js"></script>
+</head>
+
+<body>
+    <div class="background">
+        <div class="decorate1">
+
+        </div>
+        <div class="decorate2">
+
+        </div>
+        <h1 class="name1">ESRS</h1>
+        <button id='back' onclick="location.href='/catalog'">Back</button>
+        <button id='out' onclick="location.href='/logout'">Log out</button>
+        <div class="stock_controll">
+            <table class="list_">
+                <tr class="name">
+                    <th>Macaron</th>
+                </tr>
+                <tr>
+                    <th class="flavor"><input type="text" class="f1" id="flavor f1" data-item="Macaron"
+                            placeholder="flavor1"></th>
+                    <th class="num"><input type="number" class="q1" id="quantity q1" value="0" min="0"></th>
+                    <th class="flavor"><input type="text" class="f2" id="flavor f2" data-item="Macaron"
+                            placeholder="flavor2"></th>
+                    <th class="num"><input type="number" class="q2" id="quantity q2" value="0" min="0"></th>
+                    <th class="flavor"><input type="text" class="f3" id="flavor f3" data-item="Macaron"
+                            placeholder="flavor3"></th>
+                    <th class="num"><input type="number" class="q3" id="quantity q3" value="0" min="0"></th>
+                </tr>
+                <tr class="name">
+                    <th>Souffle</th>
+                </tr>
+                <tr>
+                    <th class="flavor"><input type="text" class="f4" id="flavor f4" data-item="Souffle" data-zero="Yes"
+                            value="classic" readonly>
+                    </th>
+                    <th class="num"><input type="number" class="q4" id="quantity q4" value="0" min="0"></th>
+                    <th class="flavor"><input type="text" class="f5" id="flavor f5" data-item="Souffle" data-zero="Yes"
+                            value="chocolate" readonly></th>
+                    <th class="num"><input type="number" class="q5" id="quantity q5" value="0" min="0"></th>
+                    <th class="flavor"><input type="text" class="f6" id="flavor f6" data-item="Souffle" data-zero="Yes"
+                            value="matcha" readonly></th>
+                    <th class="num"><input type="number" class="q6" id="quantity q6" value="0" min="0"></th>
+                </tr>
+                <tr class="name">
+                    <th>Mile layer</th>
+                </tr>
+                <tr>
+                    <th class="flavor"><input type="text" class="f7" id="flavor f7" data-item="Mile layer"
+                            placeholder="flavor1"></th>
+                    <th class="num"><input type="number" class="q7" id="quantity q7" value="0" min="0"></th>
+                    <th class="flavor"><input type="text" class="f8" id="flavor f8" data-item="Mile layer"
+                            placeholder="flavor2"></th>
+                    <th class="num"><input type="number" class="q8" id="quantity q8" value="0" min="0"></th>
+                    <th class="flavor"><input type="text" class="f9" id="flavor f9" data-item="Mile layer"
+                            placeholder="flavor3"></th>
+                    <th class="num"><input type="number" class="q9" id="quantity q9" value="0" min="0"></th>
+                </tr>
+                <tr class="name">
+                    <th>lemon tart</th>
+                </tr>
+                <tr>
+                    <th class="flavor"><input type="text" class="f10" id="flavor f10" data-item="lemon tart"
+                            value="lemon" data-zero="Yes" readonly></th>
+                    <th class="num"><input type="number" class="q10" id="quantity q10" value="0" min="0"></th>
+                </tr>
+                <tr class="name">
+                    <th>Saint Honoré</th>
+                </tr>
+                <tr>
+                    <th class="flavor"><input type="text" class="f11" id="flavor f11" data-item="Saint Honoré"
+                            value="caramel" data-zero="Yes" readonly></th>
+                    <th class="num"><input type="number" class="q11" id="quantity q11" value="0" min="0"></th>
+                </tr>
+                <tr class="name">
+                    <th>cheese cake</th>
+                </tr>
+                <tr>
+                    <th class="flavor"><input type="text" class="f12" id="flavor f12" data-item="cheese cake"
+                            placeholder="flavor1"></th>
+                    <th class="num"><input type="number" class="q12" id="quantity q12" value="0" min="0"></th>
+                    <th class="flavor"><input type="text" class="f13" id="flavor f13" data-item="cheese cake"
+                            placeholder="flavor2"></th>
+                    <th class="num"><input type="number" class="q13" id="quantity q13" value="0" min="0"></th>
+                    <th class="flavor"><input type="text" class="f14" id="flavor f14" data-item="cheese cake"
+                            placeholder="flavor3"></th>
+                    <th class="num"><input type="number" class="q14" id="quantity q14" value="0" min="0"></th>
+                </tr>
+                <tr class="name">
+                    <th>cream puff</th>
+                </tr>
+                <tr>
+                    <th class="flavor"><input type="text" class="f15" id="flavor f15" data-item="cream puff"
+                            placeholder="flavor1"></th>
+                    <th class="num"><input type="number" class="q15" id="quantity q15" value="0" min="0"></th>
+                    <th class="flavor"><input type="text" class="f16" id="flavor f16" data-item="cream puff"
+                            placeholder="flavor2"></th>
+                    <th class="num"><input type="number" class="q16" id="quantity q16" value="0" min="0"></th>
+                    <th class="flavor"><input type="text" class="f17" id="flavor f17" data-item="cream puff"
+                            placeholder="flavor3"></th>
+                    <th class="num"><input type="number" class="q17" id="quantity q17" value="0" min="0"></th>
+                </tr>
+                <tr class="name">
+                    <th>Tiramisù</th>
+                </tr>
+                <tr>
+                    <th class="flavor"><input type="text" class="f18" id="flavor f18" data-item="Tiramisù"
+                            value="classic" data-zero="Yes" readonly></th>
+                    <th class="num"><input type="number" class="q18" id="quantity q18" value="0" min="0"></th>
+                </tr>
+                <tr class="name">
+                    <th>Panna cotta</th>
+                </tr>
+                <tr>
+                    <th class="flavor"><input type="text" class="f19" id="flavor f19" data-item="Panna cotta"
+                            placeholder="flavor1"></th>
+                    <th class="num"><input type="number" class="q19" id="quantity q19" value="0" min="0"></th>
+                    <th class="flavor"><input type="text" class="f20" id="flavor f20" data-item="Panna cotta"
+                            placeholder="flavor2"></th>
+                    <th class="num"><input type="number" class="q20" id="quantity q20" value="0" min="0"></th>
+                    <th class="flavor"><input type="text" class="f21" id="flavor f21" data-item="Panna cotta"
+                            placeholder="flavor3"></th>
+                    <th class="num"><input type="number" class="q21" id="quantity q21" value="0" min="0"></th>
+                </tr>
+                <tr class="name">
+                    <th>chocolate cake</th>
+                </tr>
+                <tr>
+                    <th class="flavor"><input type="text" class="f22" id="flavor f22" data-item="chocolate cake"
+                            value="classic" data-zero="Yes" readonly></th>
+                    <th class="num"><input type="number" class="q22" id="quantity q22" value="0" min="0"></th>
+                </tr>
+                <tr class="name">
+                    <th>Canelés</th>
+                </tr>
+                <tr>
+                    <th class="flavor"><input type="text" class="f23" id="flavor f23" data-item="Canelés"
+                            value="classic" data-zero="Yes" readonly></th>
+                    <th class="num"><input type="number" class="q23" id="quantity q23" value="0" min="0"></th>
+                </tr>
+                <tr class="name">
+                    <th>boston pie</th>
+                </tr>
+                <tr>
+                    <th class="flavor"><input type="text" class="f24" id="flavor f24" data-item="boston pie"
+                            placeholder="flavor1"></th>
+                    <th class="num"><input type="number" class="q24" id="quantity q24" value="0" min="0"></th>
+                    <th class="flavor"><input type="text" class="f25" id="flavor f25" data-item="boston pie"
+                            placeholder="flavor2"></th>
+                    <th class="num"><input type="number" class="q25" id="quantity q25" value="0" min="0"></th>
+                    <th class="flavor"><input type="text" class="f26" id="flavor f26" data-item="boston pie"
+                            placeholder="flavor3"></th>
+                    <th class="num"><input type="number" class="q26" id="quantity q26" value="0" min="0"></th>
+                </tr>
+            </table>
+        </div>
+        <div class="con">
+            <div class="submit">submit</div>
+            <div class="clear">clear</div>
+        </div>
+        <div class="alert">
+            doesn't fill it completely
+        </div>
+        <div class="good">
+            Entered successfully
+        </div>
+    </div>
+</body>
+
+</html>

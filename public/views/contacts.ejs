@@ -1,0 +1,37 @@
+<div>
+    <div class="popup_back" id="popup_back">
+        <div class="popup">
+          <div class="pop">
+            <div class="close"><img src='img/close_button.svg' class="closelogo"></div>
+            <h3 id="reviewer"></h3>
+            <div name="review" id="review">
+                <div class="flex_container">
+                    <div>Email: </div>
+                    <div id="email"></div>    
+                </div>
+                <div class="flex_container">
+                    <div>Employee Satisfaction: </div>
+                    <div id="employSatis"></div>    
+                </div>
+                <div class="flex_container">
+                    <div>Meal Satisfaction: </div>
+                    <div id="mealSatis"></div>  
+                </div>
+                <div class="comment-dec">Comment: </div>
+                <div id="message"></div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="replace" data-val="<%=page%>">
+    <table class="contact">
+        <tr>
+            <td>name</td>
+            <td>tel</td>
+            <td colspan="2">Moves</td>
+        </tr>
+    </table>
+    </div>
+    <button data-page="<%=parseInt(page)-1%>" class="pre" id="feed" >Previous</button>
+    <button data-page="<%=parseInt(page)+1%>" class="next" id="feed" >Next</button>
+</div>

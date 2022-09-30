@@ -1,0 +1,25 @@
+<div>
+    <div class="popup_back" id="popup_back">
+        <div class="popup">
+          <div class="pop">
+            <div class="close"><img src='img/close_button.svg' class="closelogo"></div>
+            <h3 id="reviewer"></h3>
+            <textarea name="review" id="review" disabled>
+            </textarea>
+          </div>
+        </div>
+    </div>
+    <table class="contact">
+        <tr>
+            <td>seat</td>
+            <td>price</td>
+            <td>orders</td>
+            <td colspan="2">Moves</td>
+        </tr>
+        <div name="replace" class ="replace" data-val=<%=page%>>
+            
+        </div>
+    </table>
+    <button data-page="<%=parseInt(page)-1%>" class="pre" id="feed" >Previous</button>
+    <button data-page="<%=parseInt(page)+1%>" class="next" id="feed" >Next</button>
+</div>

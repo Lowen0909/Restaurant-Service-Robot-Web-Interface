@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/menuc.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+
+<body>
+    <div class="background">
+        <div class="title" id="title">
+            <h1>MENU</h1>
+        </div>
+        <div class="sides">
+            <a href="/" class="return">
+                <svg class="home" width="100" height="100" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g stroke="white" fill="transparent" stroke-width="2">
+                        <path class="inner" d="M20 40L50 10L80 40L70 40L70 70L30 70L30 40L20 40">
+                        </path>
+                        <circle cx="50" cy="42" r="35" />
+                    </g>
+                </svg>
+            </a>
+        </div>
+        <div id="change_d">
+            <svg class="drink" id="drink" width="100" height="100" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                xmlns:xlink="http://www.w3.org/1999/xlink" onmouseover="change()" onmouseout="change1()"
+                onclick="change2()">
+                <g stroke="white" fill="transparent" stroke-width="2">
+                    <path d="M20 100L60 100L70 40L10 40Z">
+                    </path>
+                </g>
+                <g class="trivial" id="trivial" stroke="white" fill="transparent" stroke-width="2">
+                    <path class="ice1" id="ice1" d="M30 100L35 95L30 90L25 95Z">
+                    </path>
+                    <path d="M45 100L50 95L45 90L40 95Z">
+                    </path>
+                    <path class="ice2" id="ice2" d="M40 90L45 85L40 80L35 85Z">
+                    </path>
+                    <path d="M33 80L38 75L33 70L28 75Z">
+                    </path>
+                    <path class="ice3" id="ice3" d="M55 65L60 60L55 55L50 60Z">
+                    </path>
+                    <path class="straw" d="M65 40L80 10L75 10L60 40Z">
+                    </path>
+                </g>
+            </svg>
+            <svg class="meal_img" id="meal_img" width="100" height="100" xmlns="http://www.w3.org/2000/svg"
+                version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" onmouseover="change_m()"
+                onmouseout="change_m1()" onclick="change_m2()">
+                <g stroke=" white" fill="transparent" stroke-width="2">
+                    <circle cx="50" cy="50" r="25" />
+                </g>
+                <g class="plate" id="plate" stroke="white" fill="transparent" stroke-width="2">
+                    <circle cx="50" cy="50" r="20" />
+                </g>
+                <g class="fork" id="fork" stroke="white" fill="transparent" stroke-width="2">
+                    <path d="M10 73C10 73 2 72 6 63L7 40C7 40 3 40 3 35L3 20 "></path>
+                    <path d="M10 73C10 73 18 72 14 63L13 40C13 40 17 40 17 35L17 20 "></path>
+                    <path d="M8 35L8 20"></path>
+                    <path d="M12 35L12 20"></path>
+                </g>
+                <g class="spoon" id="spoon" stroke="white" fill="transparent" stroke-width="2">
+                    <path d="M90 73C90 73 82 72 86 63L87 40A90 31 0 0 1 90 20"></path>
+                    <path d="M90 73C90 73 98 72 94 63L93 40A90 31 0 0 0 90 20"></path>
+                </g>
+            </svg>
+        </div>
+        <form>
+            <fieldset class="seat_choose">
+                <legend class="title_seat">Choose your Seat</legend>
+                <input type="radio" id="Aseat" name="seat" value="A" />
+                <label class="A" for="Aseat">A</label>
+                <input type="radio" id="Bseat" name="seat" value="B" />
+                <label class="B" for="Bseat">B</label>
+                <input type="radio" id="Cseat" name="seat" value="C" />
+                <label class="C" for="Cseat">C</label>
+                <input type="radio" id="Dseat" name="seat" value="D" />
+                <label class="D" for="Dseat">D</label>
+            </fieldset>
+            <div class="menuu" id="menuu">
+                <div class="menu_content_r1">
+                    <div class="meal">
+                        <div class="m_p m1_p"></div>
+                        <h1 class="m_t">Macaron</h1>
+                        <div class="Get" data-choosen="Macaron" data-number="1">
+                            Get
+                        </div>
+                        <div class="Mo">
+                            <h1 class="Macaron">$45</h1>
+                        </div>
+                        <div class="soldcon_background showornot1">
+                            <div class="soldcon">
+                                <div class="co"></div>
+                                <h1 class="space">sold out</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="meal">
+                        <div class="m_p m2_p"></div>
+                        <h1 class="m_t">Mile layer cake</h1>
+                        <div class="Get" data-choosen="Mile layer" data-number="2">
+                            Get
+                        </div>
+                        <div class="Mo">
+                            <h1 class="Mile layer cake">$80</h1>
+                        </div>
+                        <div class="soldcon_background showornot2">
+                            <div class="soldcon">
+                                <div class="co"></div>
+                                <h1 class="space">sold out</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="meal">
+                        <div class="m_p m3_p"></div>
+                        <h1 class="m_t">Souffle</h1>
+                        <div class="Get" data-choosen="Souffle" data-number="3">
+                            Get
+                        </div>
+                        <div class="Mo">
+                            <h1 class="Souffle">$100</h1>
+                        </div>
+                        <div class="soldcon_background showornot3">
+                            <div class="soldcon">
+                                <div class="co"></div>
+                                <h1 class="space">sold out</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="meal">
+                        <div class="m_p m4_p"></div>
+                        <h1 class="m_t">Lemon tart</h1>
+                        <div class="Get" data-choosen="lemon tart" data-number="4">
+                            Get
+                        </div>
+                        <div class="Mo">
+                            <h1 class="leomon tart">$120</h1>
+                        </div>
+                        <div class="soldcon_background showornot4">
+                            <div class="soldcon">
+                                <div class="co"></div>
+                                <h1 class="space">sold out</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu_content_r2">
+                    <div class="meal">
+                        <div class="m_p m5_p"></div>
+                        <h1 class="m_t">Saint Honoré</h1>
+                        <div class="Get" data-choosen="Saint Honoré" data-number="5">
+                            Get
+                        </div>
+                        <div class="Mo">
+                            <h1 class="Saint Honoré">$180</h1>
+                        </div>
+                        <div class="soldcon_background showornot5">
+                            <div class="soldcon">
+                                <div class="co"></div>
+                                <h1 class="space">sold out</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="meal">
+                        <div class="m_p m6_p"></div>
+                        <h1 class="m_t">Cheese cake</h1>
+                        <div class="Get" data-choosen="cheese cake" data-number="6">
+                            Get
+                        </div>
+                        <div class="Mo">
+                            <h1 class="Cheesecake">$70</h1>
+                        </div>
+                        <div class="soldcon_background showornot6">
+                            <div class="soldcon">
+                                <div class="co"></div>
+                                <h1 class="space">sold out</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="meal">
+                        <div class="m_p m8_p"></div>
+                        <h1 class="m_t">Cream Puff</h1>
+                        <div class="Get" data-choosen="cream puff" data-number="7">
+                            Get
+                        </div>
+                        <div class="Mo">
+                            <h1 class="Cream Puff">$50</h1>
+                        </div>
+                        <div class="soldcon_background showornot7">
+                            <div class="soldcon">
+                                <div class="co"></div>
+                                <h1 class="space">sold out</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="meal">
+                        <div class="m_p m7_p"></div>
+                        <h1 class="m_t">Tiramisù</h1>
+                        <div class="Get" data-choosen="Tiramisù" data-number="8">
+                            Get
+                        </div>
+                        <div class="Mo">
+                            <h1 class="Tiramisù">$70</h1>
+                        </div>
+                        <div class="soldcon_background showornot8">
+                            <div class="soldcon">
+                                <div class="co"></div>
+                                <h1 class="space">sold out</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu_content_r3">
+                    <div class="meal">
+                        <div class="m_p m9_p"></div>
+                        <h1 class="m_t">Panna cotta</h1>
+                        <div class="Get" data-choosen="Panna cotta" data-number="9">
+                            Get
+                        </div>
+                        <div class="Mo">
+                            <h1 class="Panna cotta">$80</h1>
+                        </div>
+                        <div class="soldcon_background showornot9">
+                            <div class="soldcon">
+                                <div class="co"></div>
+                                <h1 class="space">sold out</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="meal">
+                        <div class="m_p m10_p"></div>
+                        <h1 class="m_t">chocolate cake</h1>
+                        <div class="Get" data-choosen="chocolate cake" data-number="10">
+                            Get
+                        </div>
+                        <div class="Mo">
+                            <h1 class="chocolate cake">$100</h1>
+                        </div>
+                        <div class="soldcon_background showornot10">
+                            <div class="soldcon">
+                                <div class="co"></div>
+                                <h1 class="space">sold out</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="meal">
+                        <div class="m_p m11_p"></div>
+                        <h1 class="m_t">Canelés</h1>
+                        <div class="Get" data-choosen="Canelés" data-number="11">
+                            Get
+                        </div>
+                        <div class="Mo">
+                            <h1 class="Canelés">$50</h1>
+                        </div>
+                        <div class="soldcon_background showornot11">
+                            <div class="soldcon">
+                                <div class="co"></div>
+                                <h1 class="space">sold out</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="meal">
+                        <div class="m_p m12_p"></div>
+                        <h1 class="m_t">boston pie</h1>
+                        <div class="Get" data-choosen="boston pie" data-number="12">
+                            Get
+                        </div>
+                        <div class="Mo">
+                            <h1 class="boston pie">$80</h1>
+                        </div>
+                        <div class="soldcon_background showornot12">
+                            <div class="soldcon">
+                                <div class="co"></div>
+                                <h1 class="space">sold out</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="drinkk" id="drinkk">
+                <div class="drink_content_r1">
+                    <div class="baverage">
+                        <div class="m_p m13_p"></div>
+                        <h1 class="m_t">tea latte</h1>
+                        <div class="Get1" data-choosen="tea latte">
+                            Get
+                        </div>
+                        <div class="Mo">
+                            <h1 class="tea latte">$80</h1>
+                        </div>
+                    </div>
+                    <div class="baverage">
+                        <div class="m_p m14_p"></div>
+                        <h1 class="m_t">black abyss</h1>
+                        <div class="Get1" data-choosen="black abyss">
+                            Get
+                        </div>
+                        <div class="Mo">
+                            <h1 class="black abyss">$100</h1>
+                        </div>
+                        
+                    </div>
+                    <div class="baverage">
+                        <div class="m_p m15_p"></div>
+                        <h1 class="m_t">coffee</h1>
+                        <div class="Get1" data-choosen="coffee">
+                            Get
+                        </div>
+                        <div class="Mo">
+                            <h1 class="coffee">$80</h1>
+                        </div>
+                    </div>
+                    <div class="baverage">
+                        <div class="m_p m16_p"></div>
+                        <h1 class="m_t">Matcha latte</h1>
+                        <div class="Get1" data-choosen="Matcha latte">
+                            Get
+                        </div>
+                        <div class="Mo">
+                            <h1 class="Matcha latte">$90</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="drink_content_r2">
+                    <div class="baverage">
+                        <div class="m_p m17_p"></div>
+                        <h1 class="m_t">smoothie</h1>
+                        <div class="Get1" data-choosen="smoothie">
+                            Get
+                        </div>
+                        <div class="Mo">
+                            <h1 class="smoothie">$120</h1>
+                        </div>
+                    </div>
+                    <div class="baverage">
+                        <div class="m_p m18_p"></div>
+                        <h1 class="m_t">black coffee</h1>
+                        <div class="Get1" data-choosen="black coffee">
+                            Get
+                        </div>
+                        <div class="Mo">
+                            <h1 class="black coffee">$70</h1>
+                        </div>
+                    </div>
+                    <div class="baverage">
+                        <div class="m_p m19_p"></div>
+                        <h1 class="m_t">black tea</h1>
+                        <div class="Get1" data-choosen="black tea">
+                            Get
+                        </div>
+                        <div class="Mo">
+                            <h1 class="black tea">$40</h1>
+                        </div>
+                    </div>
+                    <div class="baverage">
+                        <div class="m_p m20_p"></div>
+                        <h1 class="m_t">green tea</h1>
+                        <div class="Get1" data-choosen="green tea">
+                            Get
+                        </div>
+                        <div class="Mo">
+                            <h1 class="green tea">$40</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <input type="button" value="clear all" class="res">
+            <input type="button" value="checkout" class="confirm">
+            <!-- 口味選擇 -->
+            <div class="flavor">
+                <div class="flavor_page">
+                    <h1 class="item"></h1>
+                    <div class="flavor_select">
+                    </div>
+                    <h1 class="Add">Add+ </h1>
+                    <h1 class="close">close</h1>
+                </div>
+            </div>
+            <!-- 口味選擇 -->
+            <!-- 飲料糖冰 -->
+            <div class="adjust">
+                <div class="adjust_page">
+                    <h1 class='item_b'></h1>
+                    <div class='adjust_select'>
+                        <div class='contorl_adj'>
+                            <h1 class='ajust_name'>Sugar</h1>
+                            <div class='selection'>
+                                <div class='option' data-sugar='regular' data-adjust='sugar'>regular</div>
+                                <div class='option' data-sugar='less' data-adjust='sugar'>less</div>
+                                <div class='option' data-sugar='half' data-adjust='sugar'>half</div>
+                                <div class='option' data-sugar='quarter' data-adjust='sugar'>quarter</div>
+                                <div class='option' data-sugar='free' data-adjust='sugar'>free</div>
+                            </div>
+                        </div>
+                        <div class='contorl_adj'>
+                            <h1 class='ajust_name'>ICE</h1>
+                            <div class='selection'>
+                                <div class='option little' data-ice='regular' data-adjust='ice'>regular</div>
+                                <div class='option little' data-ice='easy' data-adjust='ice'>easy</div>
+                                <div class='option little' data-ice='free' data-adjust='ice'>free</div>
+                            </div>
+                        </div>
+                    </div>
+                    <h1 class="no_sugar">sweetness not filled</h1>
+                    <h1 class="no_ice">amount of ice not filled</h1>
+                    <h1 class="Add1">Add+ </h1>
+                    <h1 class="close">close</h1>
+                </div>
+            </div>
+            <!-- 飲料糖冰 -->
+            <!-- 結帳 -->
+            <div id="pop_up_back" class="pop_up_back">
+                <div class="pop_up_page">
+                    <h2>Your order</h2>
+                    <div class="view">
+                        <table class="list_">
+                        </table>
+                    </div>
+                    <div class="p_c">
+                    </div>
+                    <h1 class="ncs">back to choose seat</h1>
+                    <div class="coupon_format">
+                        <input type="text" maxlength="10" size="10" class="coupon" placeholder="coupon" style="text-align: center; text-decoration: none;outline: none;border: transparent; font-size: larger; border-bottom: 1px solid black;flex-basis: 60%;
+                        flex-grow: 0;
+                        flex-shrink: 0;">
+                        <div class="coupon_check">
+                            <img class="question_mark" src="img/question-mark.svg">
+                            <img class="tick_mark remove" src="img/tick-mark.svg">
+                            <img class="cross_mark remove" src="img/cross-mark.svg">
+                        </div>
+                    </div>
+                    <div class="use_coupon" style="font-size: 40px;"><span style="position: absolute; right:50%; transform:translateX(50%); top:-65%; color: white;">use</span></div>
+                    <input type="button" value="submit" class="submit">
+                    <input type="text" value="0" class="money" readonly>
+                    <input type="button" value="back" class="back">
+                </div>
+            </div>
+            <!--回報-->
+            <div id="pop_up_back1" class="pop_up_back1">
+                <div class="pop_up_page1">
+                    <h2>Your order(Change)</h2>
+                    <h2 style="color:red; font-size:25px;">because of understock</h2>
+                    <div class="view1">
+                        <table class="list_1">
+                        </table>
+                    </div>
+                    <div class="p_c">
+                    </div>
+                    <input type="button" value="submit" class="submit">
+                    <input type="text" value="0" class="money" readonly>
+                    <input type="button" value="back" class="back">
+                </div>
+            </div>
+        </form>
+    </div>
+    <!-- 最下方資訊 -->
+    <div>
+    </div>
+</body>

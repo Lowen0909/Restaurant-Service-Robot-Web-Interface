@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/newhome.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/newhome.js"></script>
+</head>
+
+<body>
+    <div class="decorate1">
+
+    </div>
+    <div class="decorate2">
+
+    </div>
+    <h1 class="name">ESRS</h1>
+    <div class="setcontainer">
+        <div class="container">
+            <div class="slide HOME" data-content="0">
+                <p class="title">About</p>
+            </div>
+            <div class="slide MENU" data-content="1">
+                <p class="title">MENU</p>
+            </div>
+            <div class="slide CONTACT" data-content="2">
+                <p class="title">CONTACT</p>
+            </div>
+            <div class="slide RESERVATION" data-content="3">
+                <p class="title">RESERVATION</p>
+            </div>
+        </div>
+        <div class="memo">
+            <!-- content--active -->
+            <section class="content color1 content--active">
+                <img class="image book" src="img/book.svg">
+                <h1 class="title-content">ES RESTAURANT</h1>
+                <div>
+                    <div class="home_page">
+                         <div class="photo_newhome"></div><!--車子照片-->
+                         <div class="photo_newhome1"></div>
+                         <div class="photo_newhome2"></div>
+                         <div class="photo_newhome3"><span>Intro.</span></div>
+                         <div class="photo_newhome4"></div>
+                         <div class="text_newhome">The Intelligent<br> Food Delivery Robot</div><!--車子簡介-->
+                    </div>
+                    <div class="game_">Bonus game</div>
+                    <div class="game_container">
+                        <div class="maze_game">maze game</div><!-- 連接到第一個遊戲(maze)-->
+                        <div class="catch_game">catch game</div><!-- 連接到第二個遊戲(teachable machine) -->
+                    </div><!--彈出視窗-->
+
+                </div>
+            </section>
+            <section class="content color2">
+                <img class="image meal" src="img/meal.svg">
+                <h1 class="M TOP">M</h1>
+                <h1 class="E TOP">E</h1>
+                <h1 class="N TOP">N</h1>
+                <h1 class="U TOP">U</h1>
+                <h1 class="T TOP">T</h1>
+                <h1 class="O TOP">O</h1>
+                <h1 class="P TOP">P</h1>
+                <h1 class="five TOP">5</h1>
+                <!-- meal -->
+                <div class="Menu-book">
+                    <div class="slider">
+                        <div class='allslide slide1 s1 up1' data-change="s1"></div>
+                        <div class='allslide slide2 s2' data-change="s2"></div>
+                        <div class='allslide slide3 s3' data-change="s3"></div>
+                        <div class='allslide slide4 s4' data-change="s4"></div>
+                        <div class='allslide slide5 s5' data-change="s5"></div>
+                        <svg id='svg2' class='up2' xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" width="300" height="200">
+                            <g stroke="transparent" fill="transparent">
+                                <path class="triangle traing1" d="M0 0L25 0L0 200Z"></path>
+                                <path class="triangle traing2 " d="M0 200L25 0L50 200Z"></path>
+                                <path class="triangle traing3 " d="M25 0L50 200L75 0Z"></path>
+                                <path class="triangle traing4 " d="M50 200L75 0L100 200Z"></path>
+                                <path class="triangle traing5 " d="M75 0L100 200L125 0Z"></path>
+                                <path class="triangle traing6 " d="M100 200L125 0L150 200Z"></path>
+                                <path class="triangle traing7 " d="M125 0L150 200L175 0Z"></path>
+                                <path class="triangle traing8 " d="M150 200L175 0L200 200Z"></path>
+                                <path class="triangle traing9 " d="M175 0L200 200L225 0Z"></path>
+                                <path class="triangle traing10 " d="M200 200L225 0L250 200Z"></path>
+                                <path class="triangle traing11" d="M225 0L250 200L275 0Z"></path>
+                                <path class="triangle traing12 " d="M250 200L275 0L300 200Z"></path>
+                                <path class="triangle traing13 " d="M275 0L300 0L300 200Z"></path>
+
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class='alltext'>
+                    <h1 class="p0">Macaron</h1>
+                    <ul>
+                        <li>Calories:<span class="p1"> 104</span></li>
+                        <li>flavor:<span class="p2"> different flavors every day</span></li>
+                        <li>price:<span class="p3"> 45 NT</span></li>
+                    </ul>
+                </div>
+                <div class="choose">
+                    <div class='allslide1 slide1' data-slide="slide-cover1" data-change="s1" data-calories=" 104"
+                        data-flavor=" different flavors every day" data-price=" 45 NT" data-which="Macaron"></div>
+                    <div class='allslide1 slide2' data-slide="slide-cover2" data-change="s2" data-calories=" 270"
+                        data-flavor=" classic chocolate matcha" data-price=" 100 NT" data-which="Souffle"></div>
+                    <div class='allslide1 slide3' data-slide="slide-cover3" data-change="s3" data-calories=" 147"
+                        data-flavor=" different flavors every day" data-price=" 80 NT" data-which="Mile layer"></div>
+                    <div class='allslide1 slide4' data-slide="slide-cover4" data-change="s4" data-calories=" 234"
+                        data-flavor=" lemon" data-price=" 120 NT" data-which="lemon tart"></div>
+                    <div class='allslide1 slide5' data-slide="slide-cover5" data-change="s5" data-calories=" 286"
+                        data-flavor=" caramel" data-price=" 180 NT" data-which="Saint Honoré"></div>
+                </div>
+                <div class="choosed">
+                    <div class='allslide2 slide-cover1 obst'></div>
+                    <div class='allslide2 slide-cover2'></div>
+                    <div class='allslide2 slide-cover3'></div>
+                    <div class='allslide2 slide-cover4'></div>
+                    <div class='allslide2 slide-cover5'></div>
+                </div>
+                <!-- meal -->
+                <!-- drink -->
+                <div class="drink-book">
+                    <div class="dslider">
+                        <div class='dallslide dslide1 d1 up1' data-change="d1"></div>
+                        <div class='dallslide dslide2 d2' data-change="d2"></div>
+                        <div class='dallslide dslide3 d3' data-change="d3"></div>
+                        <div class='dallslide dslide4 d4' data-change="d4"></div>
+                        <div class='dallslide dslide5 d5' data-change="d5"></div>
+                        <svg id='svg2' class='up2' xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" width="300" height="200">
+                            <g stroke="transparent" fill="transparent">
+                                <path class="triangle traing14" d="M0 0L25 0L0 200Z"></path>
+                                <path class="triangle traing15" d="M0 200L25 0L50 200Z"></path>
+                                <path class="triangle traing16" d="M25 0L50 200L75 0Z"></path>
+                                <path class="triangle traing17" d="M50 200L75 0L100 200Z"></path>
+                                <path class="triangle traing18" d="M75 0L100 200L125 0Z"></path>
+                                <path class="triangle traing19" d="M100 200L125 0L150 200Z"></path>
+                                <path class="triangle traing20" d="M125 0L150 200L175 0Z"></path>
+                                <path class="triangle traing21" d="M150 200L175 0L200 200Z"></path>
+                                <path class="triangle traing22" d="M175 0L200 200L225 0Z"></path>
+                                <path class="triangle traing23" d="M200 200L225 0L250 200Z"></path>
+                                <path class="triangle traing24" d="M225 0L250 200L275 0Z"></path>
+                                <path class="triangle traing25" d="M250 200L275 0L300 200Z"></path>
+                                <path class="triangle traing26" d="M275 0L300 0L300 200Z"></path>
+
+                            </g>
+                        </svg>
+                    </div>
+
+                </div>
+                <div class='dalltext'>
+                    <h1 class="dp0">tea latte</h1>
+                    <ul>
+                        <li>Calories:<span class="dp1"> 160</span></li>
+                        <li>flavor:<span class="dp2"> EarlGrey Ceylon</span></li>
+                        <li>price:<span class="dp3"> 80 NT</span></li>
+                    </ul>
+                </div>
+                <div class="dchoose">
+                    <div class='dallslide1 dslide1' data-slide="dslide-cover1" data-change="d1" data-calories=" 160"
+                        data-flavor=" EarlGrey Ceylon" data-price=" 80 NT" data-which="tea latte"></div>
+                    <div class='dallslide1 dslide2' data-slide="dslide-cover2" data-change="d2" data-calories=" 400"
+                        data-flavor=" chocolate" data-price=" 100 NT" data-which="black abyss"></div>
+                    <div class='dallslide1 dslide3' data-slide="dslide-cover3" data-change="d3" data-calories=" 190"
+                        data-flavor=" Robusta Arabica" data-price=" 80 NT" data-which="coffee"></div>
+                    <div class='dallslide1 dslide4' data-slide="dslide-cover4" data-change="d4" data-calories=" 240"
+                        data-flavor=" muzyou UjinoMukash" data-price=" 90 NT" data-which="Matcha latte"></div>
+                    <div class='dallslide1 dslide5' data-slide="dslide-cover5" data-change="d5" data-calories=" 161"
+                        data-flavor=" different flavors every day" data-price=" 120 NT" data-which="smoothie"></div>
+                </div>
+                <div class="dchoosed">
+                    <div class='dallslide2 dslide-cover1 obst'></div>
+                    <div class='dallslide2 dslide-cover2'></div>
+                    <div class='dallslide2 dslide-cover3'></div>
+                    <div class='dallslide2 dslide-cover4'></div>
+                    <div class='dallslide2 dslide-cover5'></div>
+                </div>
+                <!-- drink -->
+                <div class="reception">
+                    <a href="/menu" class="text1"><h1 class="text1">Get it now</h1></a>
+                    <img class="reception_bell" src="img/reception-bell.svg">
+                </div>
+            </section>
+            <section class="content color3">
+                <img class="image contact-us" src="img/contact-us.svg">
+                <h1 class="title-content">ES RESTAURANT</h1>
+                <div class="format">
+                    <form class="form" action="/comment" method="POST">
+                        <div class="half left form">
+                            <input type="text" class="input-name" placeholder="Name" name="name" required>
+                            <input type="email" class="input-email" placeholder="Email address" name="email" required>
+                            <input type="tel" class="input-tele" placeholder="09xx-xxx-xxx"
+                                pattern="[0]{1}[9]{1}[0-9]{2}-[0-9]{3}-[0-9]{3}" name="tel" required>
+                        </div>
+                        <div class="half right cf">
+                            <textarea name="message" type="text" id="input-message" placeholder="Message"></textarea>
+                        </div>
+                        <div class="half sat">
+                            <div class="in">
+                                <h1>employee satisfaction:</h1>
+                            </div>
+                            <div class="in">
+                                <small>(dissatisfied~satisfied)</small>
+                            </div>
+
+                        </div>
+                        <div class="satisfy">
+                            <label><input type="radio" check="checked" name="employSatis" class="point"
+                                    value="1"><span></span></label>
+                            <label><input type="radio" check="checked" name="employSatis" class="point"
+                                    value="2"><span></span></label>
+                            <label><input type="radio" check="checked" name="employSatis" class="point"
+                                    value="3"><span></span></label>
+                            <label><input type="radio" check="checked" name="employSatis" class="point"
+                                    value="4"><span></span></label>
+                            <label><input type="radio" check="checked" name="employSatis" class="point"
+                                    value="5"><span></span></label>
+                            <label><input type="radio" check="checked" name="employSatis" class="point" value="6"
+                                    checked><span></span></label>
+                            <label><input type="radio" check="checked" name="employSatis" class="point"
+                                    value="7"><span></span></label>
+                            <label><input type="radio" check="checked" name="employSatis" class="point"
+                                    value="8"><span></span></label>
+                            <label><input type="radio" check="checked" name="employSatis" class="point"
+                                    value="9"><span></span></label>
+                            <label><input type="radio" check="checked" name="employSatis" class="point"
+                                    value="10"><span></span></label>
+                        </div>
+                        <div class="half sat">
+                            <div class="in">
+                                <h1>meal satisfaction:</h1>
+                            </div>
+                            <div class="in">
+                                <small>(dissatisfied~satisfied)</small>
+                            </div>
+
+                        </div>
+                        <div class="satisfy">
+                            <label><input type="radio" check="checked" name="mealSatis" class="point"
+                                    value="1"><span></span></label>
+                            <label><input type="radio" check="checked" name="mealSatis" class="point"
+                                    value="2"><span></span></label>
+                            <label><input type="radio" check="checked" name="mealSatis" class="point"
+                                    value="3"><span></span></label>
+                            <label><input type="radio" check="checked" name="mealSatis" class="point"
+                                    value="4"><span></span></label>
+                            <label><input type="radio" check="checked" name="mealSatis" class="point"
+                                    value="5"><span></span></label>
+                            <label><input type="radio" check="checked" name="mealSatis" class="point" value="6"
+                                    checked><span></span></label>
+                            <label><input type="radio" check="checked" name="mealSatis" class="point"
+                                    value="7"><span></span></label>
+                            <label><input type="radio" check="checked" name="mealSatis" class="point"
+                                    value="8"><span></span></label>
+                            <label><input type="radio" check="checked" name="mealSatis" class="point"
+                                    value="9"><span></span></label>
+                            <label><input type="radio" check="checked" name="mealSatis" class="point"
+                                    value="10"><span></span></label>
+                        </div>
+                        <input type="submit" value="Submit" id="input-submit">
+                    </form>
+                </div>
+                <div class="meet-us">
+                    <div class="icon-content">
+                        <span class="helper"></span>
+                        <div class="po1"><img class="small-icon" src="img/phone.svg"></div>
+                        <h1>06-275-7575#63300</h1>
+                    </div>
+                    <div class="icon-content">
+                        <span class="helper"></span>
+                        <div class="po1"><img class="small-icon" src="img/address.svg"></div>
+                        <h1>No.1, University Road,Tainan City 701,Taiwan</h1>
+                    </div>
+                    <div class="icon-content">
+                        <span class="helper"></span>
+                        <div class="po1">
+                            <img class="small-icon" src="img/mail.svg">
+                        </div>
+                        <h1>em63300@email.ncku.edu.tw</h1>
+                    </div>
+                </div>
+            </section>
+            <section class="content color4">
+                <img class="image reserve" src="img/reserve.svg">
+                <h1 class="title-content">RESERVATION</h1>
+                <div class="re_controlbox">
+                    <div class="re1">
+                        <h1 class="retitle">RESERVE</h1>
+                    </div>
+                    <div class="re2">
+                        <h1 class="retitle">CONFIRM</h1>
+                    </div>
+                </div>
+                <div class="fill_back1">
+                    <div class="confirm-page">
+                        <div class="cpage test_page">
+                            <div class="cpageinner1">
+                                <div class="confirm-check">
+                                    <h1 class="confirm-label">Name:</h1><input type="text" class="confirm-name"
+                                        placeholder="Name" maxlength="10" name='sname' required>
+                                </div>
+                                <div class="confirm-check">
+                                    <h1 class="confirm-label">Phone:</h1><input type="tel" class="confirm-tele"
+                                        placeholder="09xxxxxxxx" name="stel" maxlength="10" required>
+                                </div>
+                                <div class="text-back">
+                                    <h1 class="text-wrap">Confirm</h1>
+                                </div>
+                            </div>
+                            <div class="search">
+                                <img class="confrim_correct" src="img/check-symbol.svg">
+                                <img class="confrim_fail" src="img/fail-symbol.svg">
+                            </div>
+                        </div>
+                        <!--show data  -->
+                        <!-- new -->
+                        <div class="cpage show_page">
+                            <div class="cpageinner">
+                                <h1 class="confirm_title">Your info</h1>
+                                <div class="confirm_name">
+                                    <div class="title_name">Name:</div>
+                                    <div class="title_name show_name"></div>
+                                </div>
+                                <div class="confirm_phone">
+                                    <div class="title_phone">phone:</div>
+                                    <div class="title_phone show_phone"></div>
+                                </div>
+                                <div class="confirm_people">
+                                    <div class="title_people">people:</div>
+                                    <div class="title_people show_people"></div>
+                                </div>
+                                <div class="confirm_child">
+                                    <div class="title_child">child:</div>
+                                    <div class="title_child show_child"></div>
+                                </div>
+                                <div class="confirm_time">
+                                    <div class="title_time">time:</div>
+                                    <div class="title_time show_time"></div>
+                                </div>
+                                <h1 class="confirm_end">Enjoy your time</h1>
+                            </div>
+                        </div>
+                        <!-- new -->
+                    </div>
+                    <div class="confirm_control">
+                        <div class="return">
+                            <img class="confrim_return" src="img/returning.svg">
+                            <p>return</p>
+                        </div>
+                        <div class="implement">
+                            <!-- change 9/16 -->
+                            <a id="confirm_route" href="/flask"><p>implement</p></a>
+                        </div>
+
+                    </div>
+                    <div class="overtime showornot">Over time</div>
+                    <div class="tooearly showornot">Too early</div>
+                </div>
+                <div class="fill_back">
+                    <div class="fill_background">
+                        <div class="fill_page">
+                            <div class="x">
+                                <img class="xx" src="img/x-symbol.svg">
+                            </div>
+                            <input type="text" class="fill-name" placeholder="Name" required>
+                            <input type="tel" class="fill-tele" placeholder="09xxxxxxxx" required>
+
+                            <div class="fill_control">
+                                <select class="opt" name="people">
+                                    <option value="1" selected>1 person </option>
+                                    <option value="2">2 people</option>
+                                    <option value="3">3 people</option>
+                                    <option value="4">4 people</option>
+                                </select>
+                                <select class="opt" name="child">
+                                    <option value="" selected>child seat</option>
+                                    <option value="yes">yes</option>
+                                    <option value="no">no</option>
+                                </select>
+                                <div class="opt" class="date">
+                                    <div class="date_choose">
+                                        <p>date</p>
+                                    </div>
+                                    <div class="date_icon">
+                                        <img class="date_icon1" src="img/calendar.svg">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="time_select">
+                                <div class="time_choose">
+                                    <p>time</p>
+                                </div>
+                                <div class="time_icon">
+                                    <img class="time_icon1" src="img/time.svg">
+                                </div>
+                            </div>
+                            <div class="time-wrapper">
+                                <ul class="time-list">
+                                    <li class="time-content time-first thr" data-time="13:00" data-i="thr">
+                                        <p>13:00~15:00</p>
+                                    </li>
+                                    <li class="time-content time-second fif" data-time="15:30" data-i="fif">
+                                        <p>15:30~17:30</p>
+                                    </li>
+                                    <li class="time-content time-third eig" data-time="18:00" data-i="eig">
+                                        <p>18:00~20:00</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="reserve_sub">
+                                <p>Submit</p>
+                            </div>
+                            <div class="fail">
+                                <p>fail</p>
+                            </div>
+                            <div class="success">
+                                <p>success</p>
+                            </div>
+                            <div class="left-wrapper">
+                                <div class="header"><img class="fa fa-angle-left" src="img/angle-left-icon.svg"
+                                        style="width:5%;"><span><span class="month">
+                                        </span><span class="year"></span></span><img class="fa fa-angle-right"
+                                        src="img/angle-right-icon.svg" style="width:5%;"></div>
+                                <div class="calender">
+                                    <table>
+                                        <thead>
+                                            <tr class="weedays">
+                                                <th data-weekday="sun" data-column="0">Sun</th>
+                                                <th data-weekday="mon" data-column="1">Mon</th>
+                                                <th data-weekday="tue" data-column="2">Tue</th>
+                                                <th data-weekday="wed" data-column="3">Wed</th>
+                                                <th data-weekday="thu" data-column="4">Thu</th>
+                                                <th data-weekday="fri" data-column="5">Fri</th>
+                                                <th data-weekday="sat" data-column="6">Sat</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="days" data-row="0">
+                                                <td class="currentDay" data-column="0"></td>
+                                                <td data-column="1"></td>
+                                                <td data-column="2"></td>
+                                                <td data-column="3"></td>
+                                                <td data-column="4"></td>
+                                                <td data-column="5"></td>
+                                                <td data-column="6"></td>
+                                            </tr>
+                                            <tr class="days" data-row="1">
+                                                <td data-column="0"></td>
+                                                <td data-column="1"></td>
+                                                <td data-column="2"></td>
+                                                <td data-column="3"></td>
+                                                <td data-column="4"></td>
+                                                <td data-column="5"></td>
+                                                <td data-column="6"></td>
+                                            </tr>
+                                            <tr class="days" data-row="2">
+                                                <td data-column="0"></td>
+                                                <td data-column="1"></td>
+                                                <td data-column="2"></td>
+                                                <td data-column="3"></td>
+                                                <td data-column="4"></td>
+                                                <td data-column="5"></td>
+                                                <td data-column="6"></td>
+                                            </tr>
+                                            <tr class="days" data-row="3">
+                                                <td data-column="0"></td>
+                                                <td data-column="1"></td>
+                                                <td data-column="2"></td>
+                                                <td data-column="3"></td>
+                                                <td data-column="4"></td>
+                                                <td data-column="5"></td>
+                                                <td data-column="6"></td>
+                                            </tr>
+                                            <tr class="days" data-row="4">
+                                                <td data-column="0"></td>
+                                                <td data-column="1"></td>
+                                                <td data-column="2"></td>
+                                                <td data-column="3"></td>
+                                                <td data-column="4"></td>
+                                                <td data-column="5"></td>
+                                                <td data-column="6"></td>
+                                            </tr>
+                                            <tr class="days" data-row="5">
+                                                <td data-column="0"></td>
+                                                <td data-column="1"></td>
+                                                <td data-column="2"></td>
+                                                <td data-column="3"></td>
+                                                <td data-column="4"></td>
+                                                <td data-column="5"></td>
+                                                <td data-column="6"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+</body>
