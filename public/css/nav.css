@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,400i,600,600i');
+@import url('https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap');
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  font-family: 'Neonderthaw', cursive;
+}
+
+a {
+  text-decoration: none
+}
+
+.header {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  height: 100%;
+  min-height: 0px;
+  max-height: 100%;
+  color: #fff;
+}
+
+.header:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  z-index: -1;
+  /*將低優先級*/
+  background: linear-gradient(rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.6) 100%);
+}
+
+
+.header:before {
+  content: "";
+  width: 100%;
+  height: 150%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  transform: scale(1.0, 1.0);
+  transform: translateZ(0);
+  background: #1B2030 url(../img/background.jpg) 100% 0 no-repeat;
+  background-size: 100%;
+  background-attachment: fixed;
+  /*animation: grow 360s  linear 10ms infinite;*/
+  /*transition:all 0.4s ease-in-out;*/
+  z-index: -2
+}
+
+.header a {
+  color: #eee
+}
+
+.logo {
+  text-decoration: none;
+  display: inline-block;
+  position: absolute;
+  top: 0%;
+  left: 1%;
+  align-items: center;
+  align-content: center;
+  padding: 0px 0px;
+  font-weight: 900;
+  font-size: 25px;
+  box-sizing: border-box;
+  height: auto;
+}
+
+.sides,
+.info {
+  flex: 0 0 auto;
+  width: 50%
+}
+
+.info {
+  width: 100%;
+  padding: 20% 10% 0 10%;
+  text-align: center;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.2)
+}
+
+.info h4 {
+  font-size: 120%;
+}
+
+.info h1 {
+  font-size: 250%;
+}
+
+.info h2 {
+  font-size: 170%;
+  width: 10%;
+  transform: translateX(435%);
+  border: solid;
+  transition: all 0.4s ease-in-out;
+}
+
+.info h2:hover {
+  font-size: 190%;
+}
+
+/*@keyframes grow
+{
+  0% { transform: scale(1) translateY(-60px)}
+  100% { transform: scale(1.6) translateY(-100px)}
+}
+*/

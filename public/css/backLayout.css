@@ -1,0 +1,489 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner&display=swap');
+body{
+    background-color:transparent;
+    color:white;
+    overflow: hidden;
+}
+.bg {
+    position: absolute;
+    background: url(../img/coffee.jpg);
+    background-position: center;
+    background-size: cover;
+    top:0;
+    left:0;   
+    width: 100%;
+    height:100%;
+}
+.decorate1 {
+    position: absolute;
+    background-color:rgb(255, 255, 255,0.5);
+    right: 0%;
+    top: 2%;
+    height: 15px;
+    width: 85%;
+    z-index: 99;
+}
+
+.name {
+    position: absolute;
+    top: 1%;
+    left: 3%;
+    font-size: 50px;
+    color: ghostwhite;
+    -webkit-text-stroke: 0.1px black;
+    z-index: 99;
+}
+
+.decorate2 {
+    position: absolute;
+    background-color: rgb(255, 255, 255,0.5);
+    left: 0%;
+    top: 10%;
+    height: 15px;
+    width: 40%;
+    z-index: 99;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+}
+#out{
+    position:absolute;
+    top:5%;
+    right:3%;
+    border-radius: 10px;
+    width:6%;
+    height:6%;
+    font-size:20px;
+    color:white;
+    background-color: blueviolet;
+    font-weight: 900;
+}
+
+#out{
+    transition:1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+#out:hover{
+    transform:scale(1.2);
+}
+#back{
+    position:absolute;
+    top:5%;
+    right:12%;
+    border-radius: 10px;
+    width:6%;
+    height:6%;
+    font-size:20px;
+    color:white;
+    background-color:rgb(21, 164, 66);
+    font-weight: 900;
+}
+
+#back{
+    transition:1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+#back:hover{
+    transform:scale(1.2);
+}
+
+/* table{
+    background-color:  rgb(0, 0, 0,0.4);
+    border-radius:10px;
+    height:360px;
+    width:480px
+}
+
+form{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+td[name="title"]{
+    font-size: 36px;
+    text-align: center;
+    color:white;
+}
+#error{
+    text-align: center;
+    color:white;
+    background-color: transparent;
+}
+td.in{
+    font-size: 24px;
+    width:25%;
+    text-align: center;
+    color:white;
+    
+} */
+input.input{
+    font-size: 24px;
+    color:white;
+    width:75%;
+    background-color: transparent;
+    border-radius:5px;
+}
+.input:focus {
+    background-color: rgba(151, 153, 227, 0.25);
+}
+input[name="button"]{
+    font-size: 24px;
+    color:white;
+    width:30%;
+    background-color: rgb(45, 58, 75,0.55);
+    border-radius:5px;
+    transition:1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+input[name="button"]:hover{
+    transform:scale(1.2);
+    background-color: rgb(151, 153, 227,0.25);
+}
+
+.button{
+    border-radius:30px;
+    font-size: 20px;
+    color:white;
+    width:15%;
+    height:200px;
+    top:30%;
+}
+@keyframes movleft {
+    from { left: 42.5%; }
+    to { left: 5%; }
+}
+@keyframes movleft1 {
+    from { left: 42.5%; }
+    to { left: 30%; }
+}
+@keyframes movright {
+    from { left: 42.5%; }
+    to { left: 80%; }
+}
+@keyframes movright1 {
+    from { left: 42.5%; }
+    to { left: 55%; }
+}
+
+@keyframes colorchange {
+    from { opacity:0% }
+    to { opacity:85% }
+}
+
+
+#left{
+    position: absolute;
+    left:42.5%;
+    animation-name: movleft,colorchange;    
+    animation-duration: 2s,5s;    
+    animation-delay:0s;    
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;    
+    background-color:rgb(0, 100, 0);
+    z-index: 97;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+#right{
+    position: absolute;
+    left:42.5%;
+    animation-name: movright,colorchange;    
+    animation-duration: 2s,5s;    
+    animation-delay:0s;    
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards;
+    background-color: coral;
+    z-index: 98;   
+    font-size: 30px;
+    font-weight: 900;
+}
+#left1{
+    position: absolute;
+    left:42.5%;
+    animation-name: movleft1,colorchange;    
+    animation-duration:2s,5s;    
+    animation-delay:0s;    
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards;
+    z-index: 99;
+    background-color: rgb(25, 0, 255);
+    font-size: 30px;
+    font-weight: 900;
+}
+#left2{
+    position: absolute;
+    left:42.5%;
+    top:65%;
+    animation-name: movleft,colorchange;    
+    animation-duration: 2s,5s;    
+    animation-delay:0s;    
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;    
+    background-color:rgb(220, 42, 25);
+    z-index: 97;
+    font-size: 30px;
+    font-weight: 900;
+}
+#right1{
+    position: absolute;
+    left:42.5%;
+    animation-name: movright1,colorchange;    
+    animation-duration: 2s,5s;    
+    animation-delay:0s;    
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards;
+    background-color: rgb(209, 235, 19);
+    z-index: 98;   
+    font-size: 30px;
+    font-weight: 900;
+}
+.button{
+    transition:1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.button:hover{
+    transform:scale(1.2);
+}
+/* contact */
+table{
+    position: absolute;
+    left: 50%;
+    top:50%;
+    width:60%;
+    min-height:10%;
+    max-height:50%;
+    border: 1px solid white;
+    background-color: transparent;
+    transform: translate(-60%, -50%);
+    font-size: 20px;
+    text-align: center;
+    z-index: 1;
+}
+
+
+#top{
+    top:50%;
+    left:50%;
+}
+td{
+    background-color: rgb(45, 58, 75,0.5);
+    width: 20%;
+    max-width:20%;
+    height:40px;
+}
+.pre{
+    position: absolute;
+    left: 14%;
+    top:75%;
+    color: transparent;
+    cursor: pointer;
+    -webkit-text-stroke:0.1px white;
+    background-color: transparent;
+    font-size: 35px;
+    display:block;
+    border: none;
+    font-weight: 900;
+}
+.next{
+    position: absolute;
+    right: 26%;
+    top:75%;
+    color: transparent;
+    cursor: pointer;
+    -webkit-text-stroke:0.1px red;
+    background-color: transparent;
+    font-size: 35px;
+    display:block;
+    border: none;
+    font-weight: 900;
+}
+/* pop up */
+.popup_back {
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: fixed;
+    z-index: 100;
+    top: 0px;
+    left: 0px;
+    content: '';
+    background: rgba(0, 0, 0, 0.85);
+}
+::-webkit-scrollbar {
+    display: none;
+}
+.popup {
+    color: white;
+    font-size: 30px;
+    overflow: hidden;
+    width: 30%;
+    height: 60%;
+    z-index: 110;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+    background: rgb(45, 58, 75,0.4);
+}
+.pop{
+    margin: 0%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+    text-align: center;
+}
+#reviewer{
+    position:absolute;
+    top:10%;
+    width:100%;
+    text-align: center;
+    height:20%;
+    font-size: 40px;
+    color:white;
+}
+#review{
+    position:absolute;
+    bottom:8%;
+    width:95%;
+    left: 2.5%;
+    height:70%;
+    color:white;
+    font-size:25px;
+    resize:none;
+    overflow: auto;
+    background-color: rgba(76, 88, 104, 0.2);
+    text-align: left;
+}
+.close{
+    position: absolute;
+    width:10px;
+    height:10px;
+    top:0%;
+    right:5%;
+}
+.closelogo{
+    width:10px;
+}
+button[name="del"]{
+    font-size: 30px;
+    background-color: transparent;
+    color:rgb(226, 106, 106);
+    border: none;
+    cursor: pointer;
+}
+button[name="detail"]{
+    font-size: 30px;
+    background-color: transparent;
+    color:rgb(80, 213, 129);
+    border: none;
+    cursor: pointer;
+}
+.flex_container{
+    display:flex;
+    margin-top: 2%;
+    width: fit-content;
+    border-bottom:1px white solid;
+}
+.comment-dec{
+    margin-top: 5%;
+}
+#message{
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    word-wrap: break-word;
+    text-decoration-line: underline;
+    text-decoration-thickness: 1px;
+}
+
+/* seat page */
+.seat{
+    width:20%;
+    height:20%
+}
+
+#A{
+    position: absolute;
+    left:25%;
+    top:20%;
+    background-color: greenyellow;
+    border-radius: 10px;
+    font-size: 20px;
+}
+.cleanA{
+    position: absolute;
+    left:30%;
+    top:45%;
+    width: 10%;
+    height: 10%;
+    background-color: grey;
+    border-radius: 10px;
+    font-size: 20px;
+    color: white;
+}
+
+#B{
+    position: absolute;
+    right:25%;
+    top:20%;
+    background-color: greenyellow;
+    border-radius: 10px;
+    font-size: 20px;
+}
+.cleanB{
+    position: absolute;
+    right:30%;
+    top:45%;
+    width: 10%;
+    height: 10%;
+    background-color: grey;
+    border-radius: 10px;
+    font-size: 20px;
+    color: white;
+}
+
+#C{
+    position: absolute;
+    left:25%;
+    top:60%;
+    background-color: greenyellow;
+    border-radius: 10px;
+    font-size: 20px;
+}
+.cleanC{
+    position: absolute;
+    left:30%;
+    top:85%;
+    width: 10%;
+    height: 10%;
+    background-color: grey;
+    border-radius: 10px;
+    font-size: 20px;
+    color: white;
+}
+
+#D{
+    position: absolute;
+    right:25%;
+    top:60%;
+    background-color: greenyellow;
+    border-radius: 10px;
+    font-size: 20px;
+}
+.cleanD{
+    position: absolute;
+    right:30%;
+    top:85%;
+    width: 10%;
+    height: 10%;
+    background-color: grey;
+    border-radius: 10px;
+    font-size: 20px;
+    color: white;
+}
+

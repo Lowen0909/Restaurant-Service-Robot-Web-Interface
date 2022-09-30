@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+body{
+    font-family: 'Silkscreen', cursive;
+    font-size:40px;
+    overflow: hidden;
+}
+.background{
+    position: absolute;
+    top:0;
+    right:-200%;
+    height:100%;
+    width: 400%;
+    animation-name: change1;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    background: linear-gradient(270deg,rgb(157, 187, 253),rgb(157, 187, 253),rgb(3, 3, 143),rgb(3, 3, 143));
+}
+.background1{
+    position: absolute;
+    top:0;
+    right:-200%;
+    height:100%;
+    width: 400%;
+    animation-name: change;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    background: linear-gradient(270deg,rgb(239, 253, 157),rgb(239, 253, 157),rgb(231, 179, 24),rgb(231, 179, 24));
+}
+p{  
+    background: transparent;
+    position: absolute;
+    width:100%;
+    text-align: center;
+    right:0%;
+    top:50%;
+    transform: translateY(-50%);
+}
+@keyframes change1{
+    0%{
+        right: -200%;
+    }
+	100% {
+		right: 0%;
+	}
+}
+@keyframes change{
+    0% {
+		right: -400%;
+	}
+    50%{
+        right: -200%;
+    }
+	100% {
+		right: 0%;
+	}
+}
+
+.finish{
+    position: absolute;
+    top:80%;
+    left:42.5%;
+    width:15%;
+    height:10%;
+    font-size: 30px;
+    color:wheat;
+    background-color: transparent;
+    z-index: 100;
+    border:solid rgba(255,255,255,0.5) 5px;
+    border-radius: 10px;
+}
+.background2{
+    position: absolute;
+    top:0;
+    right:-400%;
+    height:100%;
+    width: 600%;
+    animation-name: change;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    background: linear-gradient(270deg,rgb(128, 222, 117),rgb(128, 222, 117),rgb(12, 227, 141),rgb(12, 227, 141),rgb(128, 222, 117),rgb(128, 222, 117));
+}
+
+.goal{
+    position: absolute;
+    width:100%;
+    height:50%;
+    right:0%;
+    top:5%;
+    font-size: 300px;
+}
+.del{  
+    background: transparent;
+    position: absolute;
+    width:100%;
+    height:15%;
+    text-align: center;
+    right:0%;
+    top:15%;
+    font-size: 50px;
+    transform: translateY(-50%);
+}

@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box
+}
+
+html,
+body {
+    margin: 0;
+    height: 100%;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 900;
+}
+
+input {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 900;
+    text-decoration: none;
+
+}
+
+.decorate1 {
+    position: absolute;
+    background-color: white;
+    bottom: 0%;
+    right: 2%;
+    height: 80%;
+    width: 15px;
+    z-index: 99;
+}
+
+.name1 {
+    position: absolute;
+    top: 5%;
+    right: -1.5%;
+    font-size: 50px;
+    color: ghostwhite;
+    transform: rotate(90deg);
+    z-index: 99;
+}
+
+.decorate2 {
+    position: absolute;
+    background-color: white;
+    top: 0%;
+    right: 5%;
+    height: 40%;
+    width: 15px;
+    z-index: 99;
+}
+
+input:focus {
+    outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    appearance: none;
+}
+
+.background {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+
+.background::before {
+    content: "";
+    background: url(../img/desserts-update.jpg);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.stock_controll {
+    position: absolute;
+    overflow-y: scroll;
+    width: 60%;
+    height: 80%;
+    top: 10%;
+    right: 20%;
+}
+
+
+.list_ {
+    border-collapse: collapse;
+    table-layout: fixed;
+    font-size: 25px;
+    color: blanchedalmond;
+    width: 100%;
+
+}
+
+tr {
+    width: 100%;
+    overflow: hidden;
+}
+
+th {
+    width: calc(100%/6);
+}
+
+input {
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    border: 2px solid white;
+    background-color: transparent;
+}
+
+.name {
+    text-align: left;
+}
+
+::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.con {
+    width: 15%;
+    height: 5%;
+    overflow: hidden;
+    position: absolute;
+    bottom: 2.5%;
+    right: 20%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.submit,
+.clear {
+    flex: 1;
+    border-radius: 10px;
+    color: white;
+    border: 2px solid white;
+    text-align: center;
+    opacity: 0.6;
+    font-size: 20px;
+    flex-basis: 30%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    transition: linear 0.3s;
+}
+
+.submit:hover,
+.clear:hover {
+    opacity: 1;
+}
+
+.alert {
+    color: white;
+    width: 20%;
+    font-size: 20px;
+    background-color: red;
+    position: absolute;
+    right: 35%;
+    bottom: 2.5%;
+    opacity: 0;
+    border-radius: 10px;
+    text-align: center;
+
+}
+
+.good {
+    color: white;
+    width: 20%;
+    font-size: 20px;
+    background-color: green;
+    position: absolute;
+    right: 35%;
+    bottom: 2.5%;
+    opacity: 0;
+    border-radius: 10px;
+    text-align: center;
+
+}
+
+#out{
+    position:absolute;
+    top:5%;
+    right:8%;
+    border-radius: 10px;
+    width:6%;
+    height:6%;
+    font-size:20px;
+    color:white;
+    background-color: blueviolet;
+    font-weight: 900;
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+}
+
+#out{
+    transition:1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+#out:hover{
+    transform:scale(1.2);
+}
+#back{
+    position:absolute;
+    top:5%;
+    right:17%;
+    border-radius: 10px;
+    width:6%;
+    height:6%;
+    font-size:20px;
+    color:white;
+    background-color:rgb(21, 164, 66);
+    font-weight: 900;
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+}
+
+#back{
+    transition:1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+#back:hover{
+    transform:scale(1.2);
+}
